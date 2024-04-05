@@ -53,3 +53,24 @@ directory should be look like this:
   ├── ...
   └── teacher_cifar10.pt
 ```
+
+## Distillation
+To distill **CIFAR100**, run the following code:
+```bash
+python main.py --exp_name EXP_NAME (e.g. "cifar100_exp") --data_name cifar100 --outer_lr 1e-3
+```
+
+To distill **TinyImageNet**, run the following code:
+```bash
+python main.py --exp_name EXP_NAME (e.g. "tinyimagenet_exp") --data_name tinyimagenet --outer_lr 1e-5
+```
+
+To distill **ImageNet 64x64**, run the following code:
+```bash
+python main.py --exp_name EXP_NAME (e.g. "imagenet_exp") --data_name imagenet --outer_lr 1e-5
+```
+
+To distill **ImageNette**, run the following code:
+```bash
+python main.py --exp_name EXP_NAME (e.g. "imagenette_exp") --data_name imagenette --outer_lr 1e-5
+```
