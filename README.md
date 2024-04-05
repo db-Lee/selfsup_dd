@@ -54,23 +54,53 @@ directory should be look like this:
   └── teacher_cifar10.pt
 ```
 
-## Distillation
+## Dataset Distillation
 To distill **CIFAR100**, run the following code:
 ```bash
-python main.py --exp_name EXP_NAME (e.g. "cifar100_exp") --data_name cifar100 --outer_lr 1e-3
+python train.py --exp_name EXP_NAME (e.g. "cifar100_exp") --data_name cifar100 --outer_lr 1e-3 --gpu_id N
 ```
 
 To distill **TinyImageNet**, run the following code:
 ```bash
-python main.py --exp_name EXP_NAME (e.g. "tinyimagenet_exp") --data_name tinyimagenet --outer_lr 1e-5
+python train.py --exp_name EXP_NAME (e.g. "tinyimagenet_exp") --data_name tinyimagenet --outer_lr 1e-5 --gpu_id N
 ```
 
 To distill **ImageNet 64x64**, run the following code:
 ```bash
-python main.py --exp_name EXP_NAME (e.g. "imagenet_exp") --data_name imagenet --outer_lr 1e-5
+python train.py --exp_name EXP_NAME (e.g. "imagenet_exp") --data_name imagenet --outer_lr 1e-5 --gpu_id N
 ```
 
 To distill **ImageNette**, run the following code:
 ```bash
-python main.py --exp_name EXP_NAME (e.g. "imagenette_exp") --data_name imagenette --outer_lr 1e-5
+python train.py --exp_name EXP_NAME (e.g. "imagenette_exp") --data_name imagenette --outer_lr 1e-5 --gpu_id N
+```
+
+## Transfer Learning
+To reproduce **transfer learning with CIFAR100 (Table 1)**, run the following code:
+```bash
+python test_scratch.py --source_data_name cifar100 --target_data_name full --gpu_id N
+python test.py --source_data_name cifar100 --target_data_name full --method METHOD (["random", "kmeans", "dsa", "dm", "mtt", "kip", "frepo", "krr_st"]) --test_model base --gpu_id N
+```
+
+To reproduce **transfer learning with TinyImageNet (Table 2)**, run the following code:
+```bash
+python test_scratch.py --source_data_name tinyimagenet --target_data_name full --gpu_id N
+python test.py --source_data_name tinyimagenet --target_data_name full --method METHOD (["random", "kmeans", "dsa", "dm", "mtt", "frepo", "krr_st"]) --test_model base --gpu_id N
+```
+
+To reproduce **transfer learning with ImageNet (Table 3)**, run the following code:
+```bash
+python test_scratch.py --source_data_name imagenet --target_data_name full --gpu_id N
+python test.py --source_data_name imagenet --target_data_name full --method METHOD (["random", "frepo", "krr_st"]) --test_model base --gpu_id N
+```
+
+To reproduce **architecture generalization with TinyImageNet (Figure 3)**, run the following code:
+```bash
+python test_scratch.py --source_data_name tinyimagenet --target_data_name aircraft_cars_cub2011_dogs_flowers --test_model ARCHITECTURE (["vgg", "alexnet", "mobilenet", "resnet10"]) --gpu_id N
+python test.py --source_data_name tinyimagenet --target_data_name aircraft_cars_cub2011_dogs_flowers --method METHOD (["random", "kmeans", "dsa", "dm", "mtt", "frepo", "krr_st"]) --test_model ARCHITECTURE (["vgg", "alexnet", "mobilenet", "resnet10"]) --gpu_id N
+```
+
+To reproduce **target data-free knowledge distillation with TinyImageNet (Table 4)**, run the following code:
+```bash
+python test_kd.py --source_data_name tinyimagenet --method METHOD (["gaussian", "random", "kmeans", "dsa", "dm", "mtt", "frepo", "krr_st"]) --test_model ARCHITECTURE (["base", "vgg", "alexnet", "mobilenet", "resnet10"]) --gpu_id N
 ```
