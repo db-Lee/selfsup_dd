@@ -70,11 +70,6 @@ To distill **ImageNet 64x64**, run the following code:
 python train.py --exp_name EXP_NAME (e.g. "imagenet_exp") --data_name imagenet --outer_lr 1e-5 --gpu_id N
 ```
 
-To distill **ImageNette**, run the following code:
-```bash
-python train.py --exp_name EXP_NAME (e.g. "imagenette_exp") --data_name imagenette --outer_lr 1e-5 --gpu_id N
-```
-
 ## Transfer Learning
 To reproduce **transfer learning with CIFAR100 (Table 1)**, run the following code:
 ```bash
