@@ -1,5 +1,5 @@
 # Self-Supervised Dataset Distillation for Transfer Learning
-This is the Pytorch implementation for the paper ["**Self-Supervised Dataset Distillation for Transfer Learning**", in ICLR 2021.](https://openreview.net/forum?id=h57gkDO2Yg)
+This is the Pytorch implementation for the paper ["**Self-Supervised Dataset Distillation for Transfer Learning**", in ICLR 2024.](https://openreview.net/forum?id=h57gkDO2Yg)
 
 ## Summary
 <img align="middle" width="1000" src="https://github.com/db-Lee/selfsup_dd/blob/main/assets/concept.png">
