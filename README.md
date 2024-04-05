@@ -104,3 +104,14 @@ To reproduce **target data-free knowledge distillation with TinyImageNet (Table 
 ```bash
 python test_kd.py --source_data_name tinyimagenet --method METHOD (["gaussian", "random", "kmeans", "dsa", "dm", "mtt", "frepo", "krr_st"]) --test_model ARCHITECTURE (["base", "vgg", "alexnet", "mobilenet", "resnet10"]) --gpu_id N
 ```
+
+## Reference
+To cite our paper, please use this BibTex
+```bibtex
+@inproceedings{lee2024selfsupdd,
+  title={Self-Supervised Dataset Distillation for Transfer Learning},
+  author={Dong Bok Lee and and Seanie Lee and Joonho Ko and Kenji Kawaguch and Juho Lee and Sung Ju Hwang},
+  booktitle={Proceedings of the 9th International Conference on Learning Representations},
+  year={2024}
+}
+```
