@@ -88,7 +88,7 @@ python test_scratch.py --source_data_name tinyimagenet --target_data_name full -
 python test.py --source_data_name tinyimagenet --target_data_name full --method METHOD (["random", "kmeans", "dsa", "dm", "mtt", "frepo", "krr_st"]) --test_model base --gpu_id N
 ```
 
-To reproduce **transfer learning with ImageNet (Table 3)**, run the following code:
+To reproduce **transfer learning with ImageNet 64x64 (Table 3)**, run the following code:
 ```bash
 python test_scratch.py --source_data_name imagenet --target_data_name full --gpu_id N
 python test.py --source_data_name imagenet --target_data_name full --method METHOD (["random", "frepo", "krr_st"]) --test_model base --gpu_id N
