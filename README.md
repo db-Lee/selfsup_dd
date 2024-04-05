@@ -21,6 +21,7 @@ This code is written in Python. Dependencies include
 * torchvision = 0.16.2
 * tqdm
 * korina = 0.7.1
+* transformers = 4.36.2
 
 ## Data and Model Checkpoints
 * Download **Full Data**(~40GB) from [here](https://drive.google.com/file/d/1P0zwURUbVsqoVgIRcIZXGAtGrkRvGvH0/view?usp=sharing). 
