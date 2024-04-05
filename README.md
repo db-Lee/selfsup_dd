@@ -111,7 +111,7 @@ To cite our paper, please use this BibTex
 @inproceedings{lee2024selfsupdd,
   title={Self-Supervised Dataset Distillation for Transfer Learning},
   author={Dong Bok Lee and and Seanie Lee and Joonho Ko and Kenji Kawaguch and Juho Lee and Sung Ju Hwang},
-  booktitle={Proceedings of the 9th International Conference on Learning Representations},
+  booktitle={Proceedings of the 12th International Conference on Learning Representations},
   year={2024}
 }
 ```
