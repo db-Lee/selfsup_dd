@@ -8,10 +8,10 @@ Dataset distillation aims to optimize a small set so that a model trained on the
 &nbsp;
 
 __Contribution of this work__
-- We propose a new problem of \emph{self-supervised dataset distillation} for transfer learning, where we distill an unlabeled dataset into a small set,  
+- We propose a new problem of self-supervised dataset distillation for transfer learning, where we distill an unlabeled dataset into a small set,  
     pre-train a model on it, and fine-tune it on target tasks. 
-- We have observed training instability when utilizing existing SSL objectives in bilevel optimization for self-supervised dataset distillation. Furthermore, we prove that a gradient of the SSL objectives with data augmentations or masking inputs is \emph{a biased estimator of the true gradient}.
-- To address the instability, we propose \textbf{KRR-ST} using MSE without any randomness at an inner loop. For the inner loop, we minimize MSE between a model representation of synthetic samples and target representations. For an outer loop, we minimize MSE between the original data representation of the model from inner loop and that of the model pre-trained on the original dataset. 
+- We have observed training instability when utilizing existing SSL objectives in bilevel optimization for self-supervised dataset distillation. Furthermore, we prove that a gradient of the SSL objectives with data augmentations or masking inputs is a biased estimator of the true gradient.
+- To address the instability, we propose KRR-ST using MSE without any randomness at an inner loop. For the inner loop, we minimize MSE between a model representation of synthetic samples and target representations. For an outer loop, we minimize MSE between the original data representation of the model from inner loop and that of the model pre-trained on the original dataset. 
 - We extensively validate our proposed method on numerous target datasets and architectures, and show that ours outperforms supervised dataset distillation methods.
 
 ## Dependencies
