@@ -13,3 +13,43 @@ __Contribution of this work__
 - We have observed training instability when utilizing existing SSL objectives in bilevel optimization for self-supervised dataset distillation. Furthermore, we prove that a gradient of the SSL objectives with data augmentations or masking inputs is \emph{a biased estimator of the true gradient}.
 - To address the instability, we propose \textbf{KRR-ST} using MSE without any randomness at an inner loop. For the inner loop, we minimize MSE between a model representation of synthetic samples and target representations. For an outer loop, we minimize MSE between the original data representation of the model from inner loop and that of the model pre-trained on the original dataset. 
 - We extensively validate our proposed method on numerous target datasets and architectures, and show that ours outperforms supervised dataset distillation methods.
+
+## Dependencies
+This code is written in Python. Dependencies include
+* python >= 3.10
+* pytorch = 2.1.2
+* torchvision = 0.16.2
+* tqdm
+* korina = 0.7.1
+
+## Data and Model Checkpoints
+* Download **Full Data**(~40GB) from [here](https://drive.google.com/file/d/1P0zwURUbVsqoVgIRcIZXGAtGrkRvGvH0/view?usp=sharing). 
+* Download **Distilled Data**(~702MB) from [here](https://drive.google.com/file/d/1paWuWkSKB8B-l0HVDwsF9gE2IPs4zBcE/view?usp=sharing).
+* Download **Target (Teacher) Model Checkpoints**(~158MB) from [here](https://drive.google.com/file/d/1IuN4rhlB5UuJX_jrbVIWEBXo10QWHPBE/view?usp=sharing).
+
+directory should be look like this:
+```shell
+┌── datasets/
+  ┌── aircraft/
+    ┌── X_te_32.pth
+    ├── ...
+    └── Y_tr_224.pth
+  ├── cars/
+      ...
+  └── tinyimagenet/
+  
+├── synthetic_data/
+  ┌── cifar100/
+    ┌── dm/
+        ┌── x_syn.pt
+        └── y_syn.pt
+    ├── ...
+    └── random/
+  ├── ...
+  └── tinyimagenet/
+
+└── teacher_ckpt/
+  ┌── barlow_twins_resnet18_cifar100.pt
+  ├── ...
+  └── teacher_cifar10.pt
+```
