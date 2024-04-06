@@ -28,8 +28,8 @@ def main(args):
     torch.manual_seed(args.seed)
 
     # data    
-    x_syn = torch.load(f"./synthetic_data/{args.source_data_name}/{args.method}/x_syn.pt", map_location="cpu").detach()
-    y_syn = torch.load(f"./synthetic_data/{args.source_data_name}/{args.method}/y_syn.pt", map_location="cpu").detach()
+    x_syn = torch.load(f"{args.synthetic_data_dir}/{args.source_data_name}/{args.method}/x_syn.pt", map_location="cpu").detach()
+    y_syn = torch.load(f"{args.synthetic_data_dir}/{args.source_data_name}/{args.method}/y_syn.pt", map_location="cpu").detach()
     if args.method == "kip" or args.method == "frepo" or args.method == "krr_st":
         y_syn = y_syn.float()
     else:
