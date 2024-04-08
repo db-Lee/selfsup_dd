@@ -105,7 +105,7 @@ if __name__ == '__main__':
     
     # finetune hyperparams
     args.test_opt = "sgd"
-    args.test_iteration = 5000#10000
+    args.test_iteration = None
     if args.img_size == 224 and args.test_model == "resnet18":
         args.test_batch_size = 64
     else:
