@@ -68,11 +68,8 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=None)    
 
     # data
-    #parser.add_argument('--source_data_name', type=str, default="cifar100")
-    #parser.add_argument('--source_data_name', type=str, default="tinyimagenet")
-    parser.add_argument('--source_data_name', type=str, default="imagenet")
-    #parser.add_argument('--target_data_name', type=str, default="full")
-    parser.add_argument('--target_data_name', type=str, default="aircraft_cars_cub2011_dogs_flowers")
+    parser.add_argument('--source_data_name', type=str, default="cifar100")
+    parser.add_argument('--target_data_name', type=str, default="full")
 
     # dir
     parser.add_argument('--data_dir', type=str, default="../evaluation_seanie/datasets")
