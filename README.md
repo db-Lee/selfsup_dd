@@ -58,7 +58,7 @@ directory should be look like this:
 ## Dataset Distillation
 To distill **CIFAR100**, run the following code:
 ```bash
-python train.py --exp_name EXP_NAME (e.g. "cifar100_exp") --data_name cifar100 --outer_lr 1e-3 --gpu_id N
+python train.py --exp_name EXP_NAME (e.g. "cifar100_exp") --data_name cifar100 --outer_lr 1e-4 --gpu_id N
 ```
 
 To distill **TinyImageNet**, run the following code:
