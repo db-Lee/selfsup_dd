@@ -154,7 +154,7 @@ if __name__ == '__main__':
         elif args.source_data_name == "tinyimagenet":
             args.pre_iteration = 40000 # 2000
             if args.test_model == "mobilenet":
-                args.pre_batch_size = 128
+                args.pre_batch_size = 256
             else:
                 args.pre_batch_size = 500
         elif args.source_data_name == "imagenette":
@@ -178,7 +178,7 @@ if __name__ == '__main__':
     if args.img_size == 224 and args.test_model == "resnet18":
         args.test_batch_size = 64
     else:
-        args.test_batch_size = 128
+        args.test_batch_size = 256
     args.test_lr = 0.01
     args.test_wd = 5e-4
 
