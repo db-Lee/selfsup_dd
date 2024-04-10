@@ -1,12 +1,9 @@
-import os
 import random
 import argparse
 import numpy as np
-from tqdm import tqdm, trange
 
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 from torchvision.models import resnet18
 
@@ -17,7 +14,6 @@ from utils import InfIterator, Logger
 from model_pool import ModelPool
     
 def main(args):
-    os.environ["WANDB_SILENT"] = "true"
     device = torch.device(f"cuda:{args.gpu_id}")
     torch.cuda.set_device(device)
 

@@ -1,12 +1,10 @@
+import torch
+import torch.nn.functional as F
+from data.augmentation import DiffAugment
+from models.wrapper import get_model
+from torch.utils.data import DataLoader, TensorDataset
 from tqdm import trange
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import TensorDataset, DataLoader
-
-from models.wrapper import get_model
-from data.augmentation import DiffAugment
 
 def distillation_loss(student, teacher, T=1.0, reduction="mean"):
     student = F.log_softmax(student/T, dim=-1)

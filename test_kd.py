@@ -2,7 +2,6 @@ import os
 import random
 import argparse
 import numpy as np
-from datetime import datetime
 
 import torch
 import torch.nn as nn
@@ -29,6 +28,7 @@ def main(args):
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
+    torch.cuda.manual_seed(args.seed)
 
     # data
     if args.method != "gaussian":

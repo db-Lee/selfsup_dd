@@ -1,6 +1,8 @@
 import os
 from datetime import datetime
+
 import torch
+
 
 class InfIterator:
     def __init__(self, iterable):

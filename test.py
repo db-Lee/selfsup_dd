@@ -1,18 +1,14 @@
-import os
 import random
 import argparse
 import numpy as np
-from datetime import datetime
 
 import torch
-import torch.nn as nn
 
 from data.wrapper import get_loader
 from data.augmentation import NUM_CLASSES, ParamDiffAug
 from algorithms.wrapper import get_algorithm
     
 def main(args):
-    os.environ["WANDB_SILENT"] = "true"
     device = torch.device(f"cuda:{args.gpu_id}")
     torch.cuda.set_device(device)
 

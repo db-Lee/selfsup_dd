@@ -1,5 +1,5 @@
 # Self-Supervised Dataset Distillation for Transfer Learning
-This is the Pytorch implementation for the paper ["**Self-Supervised Dataset Distillation for Transfer Learning**", in ICLR 2024.](https://openreview.net/forum?id=h57gkDO2Yg)
+This is the official Pytorch implementation for the paper ["**Self-Supervised Dataset Distillation for Transfer Learning**", in ICLR 2024.](https://openreview.net/forum?id=h57gkDO2Yg)
 
 ## Summary
 <img align="middle" width="1000" src="https://github.com/db-Lee/selfsup_dd/blob/main/assets/concept.png">
@@ -22,6 +22,11 @@ This code is written in Python. Dependencies include
 * tqdm
 * korina = 0.7.1
 * transformers = 4.36.2
+
+```bash
+conda env create -f environment.yml
+conda activate dd
+```
 
 ## Data and Model Checkpoints
 * Download **Full Data**(~40GB) from [here](https://drive.google.com/file/d/1P0zwURUbVsqoVgIRcIZXGAtGrkRvGvH0/view?usp=sharing). 

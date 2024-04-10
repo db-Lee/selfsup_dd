@@ -1,14 +1,11 @@
-from tqdm import trange, tqdm
-
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
-from torch.utils.data import TensorDataset, DataLoader
-
-from models.wrapper import get_model
 from data.augmentation import DiffAugment
+from models.wrapper import get_model
+from torch.utils.data import DataLoader, TensorDataset
+from tqdm import trange
 from transformers import get_cosine_schedule_with_warmup
 from utils import InfIterator
+
 
 def run(
     args, device, 
