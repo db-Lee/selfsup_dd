@@ -1,12 +1,9 @@
-import os
 import random
 import argparse
 import numpy as np
 
 import torch
-import torch.nn as nn
 
-import kornia.augmentation as K
 
 from models.wrapper import get_model
 from data.wrapper import get_loader
@@ -14,7 +11,6 @@ from data.augmentation import NUM_CLASSES, ParamDiffAug
 from algorithms.wrapper import get_algorithm
     
 def main(args):
-    os.environ["WANDB_SILENT"] = "true"
     device = torch.device(f"cuda:{args.gpu_id}")
     torch.cuda.set_device(device)
 
@@ -28,7 +24,6 @@ def main(args):
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
-    torch.cuda.manual_seed(args.seed)
 
     # data
     if args.method != "gaussian":
