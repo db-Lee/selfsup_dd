@@ -9,12 +9,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 from torchvision.models import resnet18
-from torchvision.utils import make_grid
-
-import wandb
 
 from data.wrapper import get_loader
-from data.augmentation import NUM_CLASSES, ParamDiffAug
+from data.augmentation import NUM_CLASSES
 from algorithms.wrapper import get_algorithm
 from utils import InfIterator, Logger
 from model_pool import ModelPool
