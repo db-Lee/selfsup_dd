@@ -24,18 +24,6 @@ def main(args):
     device = torch.device(f"cuda:{args.gpu_id}")
     torch.cuda.set_device(device)
 
-    # default augment
-    args.dsa_param = ParamDiffAug()
-    args.dsa_strategy = 'color_crop_cutout_flip_scale_rotate'
-
-    if args.debug:
-        args.exp_name = "debug"        
-        args.pre_epoch = 1
-        args.online_iteration = 2
-        args.test_iteration = 1
-        args.print_every = 1
-        args.eval_every = 1
-
     # seed
     if args.seed is None:
         args.seed = random.randint(0, 9999)
@@ -189,7 +177,6 @@ if __name__ == '__main__':
 
     # gpus
     parser.add_argument('--gpu_id', type=int, default=0)
-    parser.add_argument('--debug', action="store_true")
     args = parser.parse_args()
 
     if args.data_name == "cifar100":
