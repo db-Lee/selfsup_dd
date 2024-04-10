@@ -45,8 +45,9 @@ def main(args):
 
     # data
     args.img_shape = (3, args.img_size, args.img_size)    
-    dl_tr, dl_te, aug_tr, aug_te = get_loader(args.data_dir, args.data_name, args.outer_batch_size, args.img_size, False)
-    iter_tr = InfIterator(dl_tr)
+    dl, _, _, _ = get_loader(args.data_dir, args.data_name, args.outer_batch_size, args.img_size, False)
+    iter_tr = InfIterator(dl)
+    dl_tr, dl_te, aug_tr, aug_te = get_loader(args.data_dir, args.data_name, args.test_batch_size, args.img_size, True)
 
     # target model
     if args.data_name == "imagenette":
