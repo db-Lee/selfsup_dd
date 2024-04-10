@@ -1,15 +1,15 @@
-import random
 import argparse
-import numpy as np
+import random
 
+import numpy as np
 import torch
 
-
-from models.wrapper import get_model
-from data.wrapper import get_loader
-from data.augmentation import NUM_CLASSES, ParamDiffAug
 from algorithms.wrapper import get_algorithm
-    
+from data.augmentation import NUM_CLASSES, ParamDiffAug
+from data.wrapper import get_loader
+from models.wrapper import get_model
+
+
 def main(args):
     device = torch.device(f"cuda:{args.gpu_id}")
     torch.cuda.set_device(device)
