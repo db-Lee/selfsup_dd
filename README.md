@@ -25,7 +25,7 @@ This code is written in Python. Dependencies include
 
 ## Data and Model Checkpoints
 * Download **Full Data**(~40GB) from [here](https://drive.google.com/file/d/1P0zwURUbVsqoVgIRcIZXGAtGrkRvGvH0/view?usp=sharing). 
-* Download **Distilled Data**(~702MB) from [here](https://drive.google.com/file/d/1paWuWkSKB8B-l0HVDwsF9gE2IPs4zBcE/view?usp=sharing).
+* Download **Distilled Data**(~702MB) from [here](https://drive.google.com/file/d/1vDghSAUnmdWdGJgx9iK8dMOwoId0nuKF/view?usp=sharing).
 * Download **Target (Teacher) Model Checkpoints**(~158MB) from [here](https://drive.google.com/file/d/1IuN4rhlB5UuJX_jrbVIWEBXo10QWHPBE/view?usp=sharing).
 
 directory should be look like this:
