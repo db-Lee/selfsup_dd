@@ -182,7 +182,10 @@ if __name__ == '__main__':
     args.test_opt = "adam"
     args.test_epoch = 1000
     args.test_batch_size = 512
-    args.test_lr = 1e-4
+    if args.method == "gaussian":
+        args.test_lr = 1e-3
+    else:
+        args.test_lr = 1e-4
     args.test_wd = 0.
 
     main(args)
